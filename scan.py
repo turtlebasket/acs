@@ -7,9 +7,9 @@ from os import system
 from multiprocessing import Process
 
 system("curl", "ipinfo.io/ip", ">>", "pubIp.txt")
-ip = open("pubIp.txt")
+pubIP = open("pubIp.txt", "r").read()
 
-log = open("scan-log.txt", "w")
+log =open("scan-log.txt", "w")
 
 pir = MotionSensor(17)
 cam = picamera.PiCamera(resolution='640x480', framerate=24)
@@ -32,7 +32,7 @@ def stream():
 
 	while True:
 		with cam as camera:
-			camera.capture(streamSocket) 								# should be able to capture to socket... right?
+			camera.capture(streamSocket) # should be able to capture to socket... right?
 		sleep(0.5) 
 
 # runtime stuffs
