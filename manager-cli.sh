@@ -15,12 +15,6 @@ do
 	echo ; echo "Unrecognized user/password"
 done
 
-# Control stuff
-# serverIP = "192.168.1.5"
-
-# ** IMPORTANT: UPON SSH-ING INTO SERVER, CD TO RUNTIME DIR
-# ssh acs@\${serverIP} -p 2201
-
 echo "                _         _____      _    _____ _ _   _            " 
 echo "     /\        | |       / ____|    | |  / ____(_) | | |           " 
 echo "    /  \  _   _| |_ ___ | |     __ _| |_| (___  _| |_| |_ ___ _ __ " 
