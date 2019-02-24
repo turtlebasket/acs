@@ -16,10 +16,10 @@ cam = picamera.PiCamera(resolution='640x480', framerate=24)
 
 def scan():
 	while True:
-		pir.wait_for_motion()											# once motion has been detected:
-		log.write(dt.now().strftime("%Y-%m-%d %H:%M:%S"))				# log occurence 
+		pir.wait_for_motion()	
+		log.write(dt.now().strftime("%Y-%m-%d %H:%M:%S"))
 		with cam as camera:
-			capture_name = dt.now().strftime("%Y-%m-%d_%H-%M-%S")		# generate name based on dt
+			capture_name = dt.now().strftime("%Y-%m-%d_%H-%M-%S")
 			camera.start_recording(str(capture_name + '.mp4'))
 			pir.wait_for_no_motion()
 			camera.stop_recording()
@@ -36,6 +36,6 @@ def stream():
 		sleep(0.5) 
 
 # runtime stuffs
-if __name__ == '__main__': 												# in main thread
+if __name__ == '__main__': 	
 	Process(target=scan).start()
 	Process(target=stream).start()
