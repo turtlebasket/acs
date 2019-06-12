@@ -1,17 +1,23 @@
-# ACS: AutoCatSitter
+ACS: AutoCatSitter
+===================
 Watch your cat while you're away. 
+This project is a massive WIP at the moment. :P
 
-Big WIP at the moment :P
-
-### Planned additions
-- Web interface
-- Means of interaction with pet (speakers)
-- Food-dispensing capabilities
-
-### Hardware
-Haven't yet gotten to this phase in development, but here's a general breakdown:
+CURRENT PROTOTYPE: Observer
+---------------------------
+Captures images when motion is detected. Hardware:
 - Raspberry Pi Zero
-- PIR motion detector
-- Pi Zero compatible PiCamera (probably going to be a ripoff from aliexpress)
-- 1 or 2 servo motors for food dispenser portion
-- (Ideally) 3D-printed housing
+- PIR Motion Detector
+- PiCamera  
+![](prototype1.jpg "Prototype 1")
+
+Planned additions
+----------------- 
+1. More streamlined design
+	- 3D-printed housing
+2. Web interface
+	- Python 3: Flask
+3. Means of interaction with pet (speakers)
+	- No idea how this is going to be implemented as of right now
+4. Food-dispensing capabilities
+	- Servo motors and all that good stuff
