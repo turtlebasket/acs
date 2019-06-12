@@ -1,3 +1,6 @@
 # workspace files
-sync.sh
 .vscode/
+# saved images
+*.jpg
+# log files
+*.txt
