@@ -9,7 +9,8 @@ Captures images when motion is detected. Hardware:
 - Raspberry Pi Zero
 - PIR Motion Detector
 - PiCamera  
-![](prototype1.jpg "Prototype 1")
+
+<img src="prototype1.jpg" width=400>
 
 Planned additions
 ----------------- 
