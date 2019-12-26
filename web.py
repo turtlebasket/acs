@@ -10,5 +10,9 @@ def home():
 def stream_view():
     return render_template("stream.html")
 
+@app.route("/motion")
+def motion_view():
+    return render_template("motion.html")
+
 if __name__ == "__main__":
     app.run(debug=False, host='0.0.0.0')

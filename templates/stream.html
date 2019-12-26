@@ -3,9 +3,13 @@
 
 {% block body %}
 <center>
-	<video width="700" height="500">
-		<source src="127.0.0.1" source="video/mp4">
-		Failed to load feed.
+	<h3>Camera Livestream</h3>
+	<video width="700" height="500" src="rtp://127.0.0.1:8000/">
+	<!-- other protocols
+	- rtp
+	- rtsp
+	- tcp/h264
+	-->
 	</video>
 </center>
 {% endblock %}
