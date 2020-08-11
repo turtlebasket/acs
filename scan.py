@@ -1,6 +1,6 @@
 import socket
 from threading import Thread
-from time import gmtime, strftime, sleep
+from time import localtime, gmtime, strftime, sleep
 from picamera import PiCamera
 from gpiozero import MotionSensor
 
@@ -37,16 +37,16 @@ def net_stream():
 def motion_capture():
     while True:
         pir.wait_for_motion()
-        logtime = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+        logtime = strftime("[%H:%M:%S on %m/%d/%Y]\n", localtime())
         cam.capture("{}.jpg".format(logtime))
         print("Motion/Image at {} captured.".format(logtime))
         pir.wait_for_no_motion()
 
-def motionLog():
+def motion_log():
     while True:
         pir.wait_for_motion()
     with open("motion.log", "a+") as motionlog:
-        motionlog.write(strftime("%Y-%m-%d %H:%M:%S\n", gmtime()))
+        motionlog.write(strftime("[%H:%M:%S on %m/%d/%Y]\n", localtime()))
     pir.wait_for_no_motion()
 
 cam.start_preview()
