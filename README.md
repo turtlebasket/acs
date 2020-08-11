@@ -1,11 +1,12 @@
-ACS: AutoCatSitter
-===
-Watch your cat/other pet while you're away. 
+<div align="center">
+<h1>ACS: AutoCatSitter</h1>
+Keep tabs on your cat/other pet while you're away.
+</div>
 
 Current features
 ---
 - Capture & save picture upon motion detection
-- Livestream with web interface (WIP)
+- Livestream with web interface
 
 Hardware requirements
 ---
@@ -13,9 +14,17 @@ Hardware requirements
 - PIR Motion Detector
 - PiCamera  
 
-<img src="assets/prototype1.jpg" width=400>
-
-Upcoming
+Images
 ---
-- End-user `rsync` script (for ease of use with motion capture feature)
-- Email notifications when motion is detected (or is detected within a certain timeframe)
+
+<div align="center">
+<h4>Basic hardware prototype</h4>
+<img src="assets/prototype1.jpg" width=400>
+<br><br>
+</div>
+
+<div align="center">
+<h4>Web interface - Motion log</h4>
+<img src="assets/webdemo1.png" width=800>
+<br><br>
+</div>
