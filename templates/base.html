@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<title>
+		AUTOCATSITTER - {% block title %} {% endblock %}
+	</title>
+
+	<head>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+
+	</head>
+
+	<body>
+		<header style="display:flex; justify-content: space-between; background: #EDEDED; padding: 30px;">
+			<div style="text-align:left">
+				<b>AUTOCATSITTER - {% block pagetitle %} {% endblock %}</b>
+			</div>
+			<div>
+				<a href="./home">HOME</a> |
+				<a href="./motion">MOTION LOG</a> |
+				<a href="./stream">STREAM</a>
+			</div>
+		</header>
+
+		{% block body %} {% endblock %}
+	</body>
+
+</html>

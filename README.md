@@ -13,7 +13,7 @@ Hardware requirements
 - PIR Motion Detector
 - PiCamera  
 
-<img src="prototype1.jpg" width=400>
+<img src="assets/prototype1.jpg" width=400>
 
 Upcoming
 ---

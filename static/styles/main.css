@@ -1,0 +1,31 @@
+* {
+    font-family: Calibri;
+}
+
+p { 
+    font-size: 		16px;
+    margin-top: 	30px;
+    margin-left: 	80px;
+    margin-right: 	80px;
+}
+
+a {
+    color: #458B00;
+}
+
+video {
+    background: 	#000000;
+    margin-top: 	40px;
+    margin-bottom: 	40px;
+    margin-left: 	80px;
+    margin-right: 	80px;
+}
+
+textarea {
+    width:98%;
+    height: 100%;
+    padding: 10px;
+    margin: 10px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}

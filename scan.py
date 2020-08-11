@@ -14,7 +14,7 @@ sock = socket.socket()
 sock.bind(('0.0.0.0', 8000))
 sock.listen(0)
 
-def netStream():
+def net_stream():
     while True:
         try:
             connection = sock.accept()[0].makefile('wb')
@@ -34,7 +34,7 @@ def netStream():
                 pass
         print("-- END STREAM LOOP --")
 
-def motionCapture():
+def motion_capture():
     while True:
         pir.wait_for_motion()
         logtime = strftime("%Y-%m-%d %H:%M:%S", gmtime())
@@ -54,7 +54,7 @@ sleep(2) # warmup time
 
 Thread(target=motionLog).start()
 print("motionLog thread started.")
-Thread(target=netStream).start()
+Thread(target=net_stream).start()
 print("netStream thread started.")
 
 cam.stop_preview()
