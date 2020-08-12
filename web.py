@@ -10,7 +10,7 @@ print(mlog)
 app = Flask(__name__)
 
 def run_web_debug():
-    app.run(debug=True, host=f'0.0.0.0:{cfg["host_port"]}')
+    app.run(debug=True, host='0.0.0.0:{}'.format(cfg["host_port"]))
     
 def run_web():
     waitress_serve(app, host='0.0.0.0', port=cfg["host_port"])
