@@ -12,7 +12,7 @@ cam.framerate = 24
 cam.resolution = (640, 480)
 cam.vflip = True
 sock = socket.socket()
-sock.bind(('0.0.0.0', ))
+sock.bind(('0.0.0.0', cfg["stream_port"]))
 sock.listen(0)
 
 def net_stream():
