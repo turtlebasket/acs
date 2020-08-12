@@ -28,5 +28,7 @@ textarea {
     margin: 10px;
     overflow-y: scroll;
     box-sizing: border-box;
-    resize: vertical
+    resize: vertical;
+    font-family: monospace;
+    font-size: 14px;
 }

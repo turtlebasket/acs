@@ -1,17 +1,19 @@
-from json import load
 from flask import Flask, render_template
 from waitress import serve as waitress_serve
+from config import cfg
 
-with open("config.json", "r") as cfg_file:
-    cfg = load(cfg_file)
+# mlog = open(cfg["motion_log"], "r").readlines()
+# print(mlog[1])
+mlog = open(cfg["motion_log"], "r").read()
+print(mlog)
 
 app = Flask(__name__)
 
 def run_web_debug():
-    app.run(debug=True, host='0.0.0.0:80')
+    app.run(debug=True, host=f'0.0.0.0:{cfg["host_port"]}')
     
 def run_web():
-    waitress_serve(app, host='0.0.0.0', port=80)
+    waitress_serve(app, host='0.0.0.0', port=cfg["host_port"])
 
 @app.route("/")
 @app.route("/home")
@@ -24,7 +26,7 @@ def stream_view():
 
 @app.route("/motion")
 def motion_view():
-    return render_template("motion.html", cfg=cfg)
+    return render_template("motion.html", cfg=cfg, mlog=mlog)
 
 if __name__ == "__main__":
     run_web()

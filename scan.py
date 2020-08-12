@@ -3,6 +3,7 @@ from threading import Thread
 from time import localtime, gmtime, strftime, sleep
 from picamera import PiCamera
 from gpiozero import MotionSensor
+from config import cfg
 
 cam = PiCamera()
 pir = MotionSensor(17)
@@ -11,7 +12,7 @@ cam.framerate = 24
 cam.resolution = (640, 480)
 cam.vflip = True
 sock = socket.socket()
-sock.bind(('0.0.0.0', 8000))
+sock.bind(('0.0.0.0', ))
 sock.listen(0)
 
 def net_stream():
@@ -52,7 +53,7 @@ def motion_log():
 cam.start_preview()
 sleep(2) # warmup time
 
-Thread(target=motionLog).start()
+Thread(target=motion_log).start()
 print("motionLog thread started.")
 Thread(target=net_stream).start()
 print("netStream thread started.")
