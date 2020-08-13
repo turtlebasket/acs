@@ -2,11 +2,6 @@ from flask import Flask, render_template
 from waitress import serve as waitress_serve
 from config import cfg
 
-# mlog = open(cfg["motion_log"], "r").readlines()
-# print(mlog[1])
-mlog = open(cfg["motion_log"], "r").read()
-print(mlog)
-
 app = Flask(__name__)
 
 def run_web_debug():
@@ -26,6 +21,10 @@ def stream_view():
 
 @app.route("/motion")
 def motion_view():
+    mlog = open(cfg["motion_log"], "r").readlines()
+    mlog = [l.strip() for l in mlog]
+    mlog.reverse()
+    print(mlog)
     return render_template("motion.html", cfg=cfg, mlog=mlog)
 
 if __name__ == "__main__":

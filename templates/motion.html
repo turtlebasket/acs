@@ -5,7 +5,8 @@
 {% block body %}
 
 <textarea readonly>
-{{ mlog }}
+{% for i in mlog %}{{ i }}
+{% endfor %}
 </textarea>
 
 {% endblock %}
