@@ -1,34 +1,44 @@
 * {
-    font-family: Calibri;
+  font-family: Calibri;
 }
 
 p { 
-    font-size: 		16px;
-    margin-top: 	30px;
-    margin-left: 	80px;
-    margin-right: 	80px;
+  font-size: 		  16px;
+  margin-top: 	  30px;
+  margin-left: 	  80px;
+  margin-right: 	80px;
 }
 
 a {
-    color: #458B00;
+  color: #458B00;
 }
 
 video {
-    background: 	#000000;
-    margin-top: 	40px;
-    margin-bottom: 	40px;
-    margin-left: 	80px;
-    margin-right: 	80px;
+  background:   #000000;
+  margin-top: 	  40px;
+  margin-bottom: 	40px;
+  margin-left: 	  80px;
+  margin-right: 	80px;
 }
 
 textarea {
-    width:98%;
-    min-height: 200px;
-    padding: 10px;
-    margin: 10px;
-    overflow-y: scroll;
-    box-sizing: border-box;
-    resize: vertical;
-    font-family: monospace;
-    font-size: 14px;
+  width:98%;
+  min-height: 200px;
+  padding: 10px;
+  margin: 10px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  resize: vertical;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.tilearea {
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imgtile {
+  width: 100;
 }
