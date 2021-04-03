@@ -3,6 +3,7 @@ from waitress import serve as waitress_serve
 from config import cfg
 from glob import glob
 from re import search as regex_search
+from os.path import getmtime
 
 app = Flask(__name__)
 
@@ -30,16 +31,18 @@ def motion_view():
         mlog.reverse()
     except:
         mlog = []
-    print(mlog)
     return render_template("motion.html", cfg=cfg, mlog=mlog)
 
 @app.route("/captures")
 def capture_view():
+    globlist = glob('static/capture/*.jpg')
+    globlist.sort(key=getmtime)
+    globlist.reverse()
     fn = []
-    for i in glob('static/capture/*.jpg'):
+    for i in globlist:
         fn.append({
             "path": i, 
-            "filename": regex_search(r"(?<=static/capture\\)(.*)(?=.jpg)", i).group()
+            "filename": regex_search(r"(?<=static/capture/)(.*)(?=.jpg)", i).group()
         })
     return render_template("captures.html", filenames=fn)
 
