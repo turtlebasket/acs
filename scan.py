@@ -38,6 +38,7 @@ def net_stream():
 def motion_capture():
     while True:
         pir.wait_for_motion()
+        sleep(0.8) # give subject time to move into frame
         logtime = strftime("%H:%M:%S_%m-%d-%Y", localtime())
         cam.capture("static/capture/{}.jpg".format(logtime))
         print("Motion/Image at {} captured.".format(logtime))
