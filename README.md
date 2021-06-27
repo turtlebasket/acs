@@ -24,6 +24,12 @@ Images
 </div>
 
 <div align="center">
+<h4>Web interface - Captures</h4>
+<img src="assets/webdemo2.png" width=800>
+<br><br>
+</div>
+
+<div align="center">
 <h4>Web interface - Motion log</h4>
 <img src="assets/webdemo1.png" width=800>
 <br><br>
